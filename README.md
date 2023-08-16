@@ -1,1 +1,1 @@
-# linear_concepts
+# this repo is started to keep track of the learning concepts in each of the files
