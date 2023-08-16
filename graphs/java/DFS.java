@@ -15,6 +15,9 @@ public class DFS {
         graph.put("f", new ArrayList<>());
 
         DFS_Print(graph, "a");
+
+        System.out.println("---------------------------Recursive---------------------------------");
+        DFS_Print_Recursive(graph, "a");
     }
 
     public static void DFS_Print(Map<String, List<String>> graph, String source) {
@@ -29,6 +32,14 @@ public class DFS {
             for (String neighbor : neighbors) {
                 stack.push(neighbor);
             }
+        }
+    }
+
+    public static void DFS_Print_Recursive(Map<String, List<String>> graph, String source){
+
+        System.out.println(source);
+        for(String neighbor: graph.get(source)){
+            DFS_Print_Recursive(graph, neighbor);
         }
     }
 }

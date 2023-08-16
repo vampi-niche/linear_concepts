@@ -1,6 +1,3 @@
-
-
-
 const graph = {
     a: ['c','b'],
     b: ['d'],
@@ -25,4 +22,16 @@ const DFS_Print = (graph, source) =>{
 
 };
 
+const DFS_Print_Recursive = (graph, source) =>{
+
+    console.log(source);
+
+    for(let neighbor of graph[source]){
+        DFS_Print_Recursive(graph, neighbor)
+    }
+
+};
+
 DFS_Print(graph,'a');
+console.log("----------------------------Recursive------------------------")
+DFS_Print_Recursive(graph,'a');
