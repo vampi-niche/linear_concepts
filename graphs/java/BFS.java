@@ -18,10 +18,10 @@ public class BFS {
 
         Queue<String> queue = new LinkedList<String>();
 
-        queue.offer(source);
+        queue.offer(source);        //enque from rear
 
         while(!queue.isEmpty()){
-            String current = queue.poll();
+            String current = queue.poll(); //Deque from front
             System.out.print(current);
 
             List<String> neighbors = graph.get(current);
