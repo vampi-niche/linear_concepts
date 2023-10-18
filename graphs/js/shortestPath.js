@@ -43,6 +43,7 @@ const shortestPath = (edges, src, dest) => {
 
         for(let neighbor of graph[curr]){
             if(!(visited.has(neighbor)))
+            visited.add(neighbor)
             queue.push([neighbor, dist + 1])
         }
     }
